@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。 1234567891011int aplusb(int a, int b) &amp;#123;        // write your code here        int c1 = a^b;        int c2 =(a&amp;amp;b)&amp;lt;&amp;lt;1;        while(c2 != 0)&amp;#123;">
+<meta name="description" content="给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。  1234567891011int aplusb(int a, int b) &amp;#123;        // write your code here        int c1 = a^b;        int c2 =(a&amp;amp;b)&amp;lt;&amp;lt;1;        while(c2 != 0)&amp;#123;">
 <meta name="keywords" content="笔试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A+B">
 <meta property="og:url" content="http://yoursite.com/2017/11/17/A-B/index.html">
 <meta property="og:site_name" content="Maple">
-<meta property="og:description" content="给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。 1234567891011int aplusb(int a, int b) &amp;#123;        // write your code here        int c1 = a^b;        int c2 =(a&amp;amp;b)&amp;lt;&amp;lt;1;        while(c2 != 0)&amp;#123;">
+<meta property="og:description" content="给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。  1234567891011int aplusb(int a, int b) &amp;#123;        // write your code here        int c1 = a^b;        int c2 =(a&amp;amp;b)&amp;lt;&amp;lt;1;        while(c2 != 0)&amp;#123;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-17T15:18:51.292Z">
+<meta property="og:updated_time" content="2017-11-23T12:25:17.018Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A+B">
-<meta name="twitter:description" content="给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。 1234567891011int aplusb(int a, int b) &amp;#123;        // write your code here        int c1 = a^b;        int c2 =(a&amp;amp;b)&amp;lt;&amp;lt;1;        while(c2 != 0)&amp;#123;">
+<meta name="twitter:description" content="给出两个整数a和b, 求他们的和, 但不能使用 + 等数学运算符。  1234567891011int aplusb(int a, int b) &amp;#123;        // write your code here        int c1 = a^b;        int c2 =(a&amp;amp;b)&amp;lt;&amp;lt;1;        while(c2 != 0)&amp;#123;">
 
 
 
@@ -320,7 +320,9 @@
       
 
       
-        <p>给出两个整数a和b, 求他们的和, 但不能使用 <code>+</code> 等数学运算符。</p>
+        <blockquote>
+<p>给出两个整数a和b, 求他们的和, 但不能使用 <code>+</code> 等数学运算符。</p>
+</blockquote>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">aplusb</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</div><div class="line">        <span class="comment">// write your code here</span></div><div class="line">        <span class="keyword">int</span> c1 = a^b;</div><div class="line">        <span class="keyword">int</span> c2 =(a&amp;b)&lt;&lt;<span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(c2 != <span class="number">0</span>)&#123;</div><div class="line">            a=c1;</div><div class="line">            c1 = c1^c2;</div><div class="line">            c2 = (a &amp; c2)&lt;&lt;<span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> c1;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 
       
@@ -361,6 +363,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/23/平衡二叉树/" rel="prev" title="平衡二叉树">
+                平衡二叉树 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -432,7 +438,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

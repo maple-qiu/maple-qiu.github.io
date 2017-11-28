@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="删除链表中等于给定值val的所有节点。 123456789101112131415161718192021ListNode * removeElements(ListNode * head, int val) &amp;#123;    // write your code here    while(head!=NULL &amp;amp;&amp;amp; head-&amp;gt;val==val)&amp;#123;">
+<meta name="description" content="删除链表中等于给定值val的所有节点。  123456789101112131415161718192021ListNode * removeElements(ListNode * head, int val) &amp;#123;    // write your code here    while(head!=NULL &amp;amp;&amp;amp; head-&amp;gt;val==val)&amp;#123;">
 <meta name="keywords" content="笔试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="删除链表中的元素">
 <meta property="og:url" content="http://yoursite.com/2017/11/15/删除链表中的元素/index.html">
 <meta property="og:site_name" content="Maple">
-<meta property="og:description" content="删除链表中等于给定值val的所有节点。 123456789101112131415161718192021ListNode * removeElements(ListNode * head, int val) &amp;#123;    // write your code here    while(head!=NULL &amp;amp;&amp;amp; head-&amp;gt;val==val)&amp;#123;">
+<meta property="og:description" content="删除链表中等于给定值val的所有节点。  123456789101112131415161718192021ListNode * removeElements(ListNode * head, int val) &amp;#123;    // write your code here    while(head!=NULL &amp;amp;&amp;amp; head-&amp;gt;val==val)&amp;#123;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-17T15:16:55.136Z">
+<meta property="og:updated_time" content="2017-11-23T12:24:47.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="删除链表中的元素">
-<meta name="twitter:description" content="删除链表中等于给定值val的所有节点。 123456789101112131415161718192021ListNode * removeElements(ListNode * head, int val) &amp;#123;    // write your code here    while(head!=NULL &amp;amp;&amp;amp; head-&amp;gt;val==val)&amp;#123;">
+<meta name="twitter:description" content="删除链表中等于给定值val的所有节点。  123456789101112131415161718192021ListNode * removeElements(ListNode * head, int val) &amp;#123;    // write your code here    while(head!=NULL &amp;amp;&amp;amp; head-&amp;gt;val==val)&amp;#123;">
 
 
 
@@ -320,7 +320,9 @@
       
 
       
-        <p>删除链表中等于给定值val的所有节点。</p>
+        <blockquote>
+<p>删除链表中等于给定值val的所有节点。</p>
+</blockquote>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function">ListNode * <span class="title">removeElements</span><span class="params">(ListNode * head, <span class="keyword">int</span> val)</span> </span>&#123;</div><div class="line">    <span class="comment">// write your code here</span></div><div class="line">    <span class="keyword">while</span>(head!=<span class="literal">NULL</span> &amp;&amp; head-&gt;val==val)&#123;</div><div class="line">        head = head-&gt;next;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(head==<span class="literal">NULL</span>)&#123;<span class="keyword">return</span> <span class="literal">NULL</span>;&#125;</div><div class="line">    ListNode *hea;</div><div class="line">    ListNode *nex;</div><div class="line">    hea = head;</div><div class="line">    nex = head-&gt;next;</div><div class="line">    <span class="keyword">while</span>(nex!=<span class="literal">NULL</span>)&#123;</div><div class="line">        <span class="keyword">if</span>(nex-&gt;val==val)&#123;</div><div class="line">            hea-&gt;next =nex-&gt;next;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            hea = hea-&gt;next; </div><div class="line">        &#125;</div><div class="line">        nex=hea-&gt;next;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> head;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
@@ -436,7 +438,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
