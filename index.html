@@ -252,6 +252,130 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/27/二叉树的路径和/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="邱枫">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Maple">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/27/二叉树的路径和/" itemprop="url">二叉树的路径和</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-27T21:43:26+08:00">
+                2017-12-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>给定一个二叉树，找出所有路径中各节点相加总和等于给定 <code>目标值</code> 的路径。</p>
+<p>一个有效的路径，指的是从根节点到叶节点的路径。</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; Sum;<span class="comment">//全局变量，要返回的值  </span></div><div class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; binaryTreePathSum(TreeNode *root, <span class="keyword">int</span> target) &#123;  </div><div class="line">        <span class="keyword">if</span>(root==<span class="literal">NULL</span>)&#123;  </div><div class="line">            <span class="keyword">return</span> Sum;  </div><div class="line">        &#125;  </div><div class="line">          </div><div class="line">        <span class="keyword">int</span> currentSum=<span class="number">0</span>;  </div><div class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; path;  </div><div class="line">        Path(root,target,path,currentSum);  </div><div class="line">        <span class="keyword">return</span> Sum;  </div><div class="line">    &#125;  </div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Path</span><span class="params">(TreeNode *root, <span class="keyword">int</span> target,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; path,<span class="keyword">int</span> currentSum)</span>  </span></div><div class="line"><span class="function">    </span>&#123;  </div><div class="line">        currentSum += root-&gt;val;  </div><div class="line">        path.push_back(root-&gt;val);  </div><div class="line">        <span class="comment">//如果是叶结点，且路径上的结点值等于target，打印出来  </span></div><div class="line">        <span class="keyword">bool</span> isLeaf = root-&gt;left == <span class="literal">NULL</span> &amp;&amp; root-&gt;right == <span class="literal">NULL</span>;  </div><div class="line">        <span class="keyword">if</span>(currentSum==target&amp;&amp;isLeaf)&#123;  </div><div class="line">            Sum.push_back(path);  </div><div class="line">        &#125;  </div><div class="line">        <span class="comment">//如果不是叶结点，则遍历它的子结点  </span></div><div class="line">        <span class="keyword">if</span>(root-&gt;left!=<span class="literal">NULL</span>)&#123;  </div><div class="line">            Path(root-&gt;left,target,path,currentSum);  </div><div class="line">        &#125;  </div><div class="line">        <span class="keyword">if</span>(root-&gt;right!=<span class="literal">NULL</span>)&#123;  </div><div class="line">            Path(root-&gt;right,target,path,currentSum);  </div><div class="line">        &#125;  </div><div class="line">      <span class="comment">//在返回到父结点之前，在路径上删除当前结点，并在currentSum中减去该结点值  </span></div><div class="line">      currentSum -= root-&gt;val;  </div><div class="line">      path.pop_back();  </div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/13/山月/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1424,140 +1548,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/28/大整数加法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="邱枫">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Maple">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/28/大整数加法/" itemprop="url">大整数加法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-28T23:11:07+08:00">
-                2017-11-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>以字符串的形式给出两个非负整数 <code>num1</code> 和 <code>num2</code>，返回 <code>num1</code> 和 <code>num2</code> 的和。</p>
-<h5 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h5><ul>
-<li>num1 和 num2 的长度都小于5100。</li>
-<li>num1 和 num2 都只包含数字 0-9。</li>
-<li>num1 和 num2 都不包含任何前导零。</li>
-<li>您不能使用任何内置的BigInteger库内的方法或直接将输入转换为整数。</li>
-</ul>
-</blockquote>
-<p>思路：同二进制求和</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1607,7 +1602,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
